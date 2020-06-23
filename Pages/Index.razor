@@ -1,0 +1,15 @@
+﻿@page "/"
+@using CodigoQRBlazor.Data
+@inject CodigoQR codigoQR
+
+<h1>Generador de Código QR</h1>
+
+<input type="text" @bind="codigoQR.Texto" placeholder="Ejemplo: https://jhondev.com/" style="width:600px"/>
+<br />
+<br />
+<button class="btn btn-primary" @onclick="codigoQR.QRGenerator"> Generar</button>
+<br />
+<br />
+<img src="@codigoQR.CodigoQRstr" style="width:300px; height:300px" />
+
+@*follow me... jhondev.com*@
